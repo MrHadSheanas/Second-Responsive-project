@@ -70,6 +70,7 @@ header{
    padding: 1rem 2rem;
    z-index: 1000;
    margin-left: 0px;
+   box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.256);
 }
 #img-logo{
    width: 30px;
@@ -147,7 +148,7 @@ header .fa-bars{
       border-radius: .5rem;
       background-color: white;
       flex-flow: column;
-      z-index: 1000;
+      z-index:1000;
       transition: .2s linear;
       display: none;
       
@@ -256,7 +257,7 @@ header .navbar ul li:hover{
 
 @media screen and (max-width:1200px) {
    .Home1 .div2 h4{
-      font-size:1.5rem;
+      font-size:3rem;
    }
    .Home1 .div2{
       top: -30vh;
@@ -265,37 +266,47 @@ header .navbar ul li:hover{
 
 }
 
-@media  (max-width:900px){
+@media  (max-width:940px){
    .Home1 .div1{
       display: block;
       width: 100%;
       height: 80vh;
    }
    .Home1 .div1 p{
-      font-size: 1.5rem;
+      font-size: 2.4rem;
       text-align: center;
    }
    .Home1 .div1 h3{
-      font-size: 3rem;
+      font-size: 4rem;
    }
    .Home1 .div2{
       position: relative;
-      top:30vh;
+      top:15vh;
       left: 10%;
       width: 80%;
 
       overflow: hidden;
    }
+   .Home1{
+      height:180vh;
+}
    
    #video{
-      height: 200vh;
+      height: 180vh;
    }
 
 }
 
- @media  (max-width:468px){
 
-   
+ @media  (max-width:700px){
+
+   .Home1 .div1 p{
+      font-size: 2rem;
+   }
+   .Home1 .div1 h3{
+      font-size: 2.6rem;
+   }
+
 }
 
 .header-test{
@@ -307,9 +318,13 @@ header .navbar ul li:hover{
 
    
 }
-@media  (max-width:330px) {
+@media  (max-width:360px) {
    .Home1 .div2 h4{
       font-size: 1rem;
+   }
+   .Home1 .div2{
+      z-index:0;
+      
    }
    .Home1 .div2 span{
       font-size: 1rem;
@@ -323,14 +338,138 @@ header .navbar ul li:hover{
       font-size: 1rem;
    }
    .Home1 .div1{
-      height: 70vh;
+      height: 65vh;
    }
    .Home1 .div1 h3{
       font-size: 2.4rem;
    }
 #video{
-   height: 140vh;
+   height: 150vh;
+}
+.Home1{
+   height: 150vh;
 }
 
    }
 
+.feature{
+   width: 100%;
+   height: 93vh;
+   background-color: white;
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   position: relative;
+}
+
+.feature div{
+   width: 250px;
+   height: 310px;
+   text-align: center;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+      margin-left: 20px;
+    position: relative;
+
+  
+   
+}
+.feature div img{
+   width:100%;
+   height: 150px;
+
+}
+.feature div div{
+   height: 0px;
+   margin-bottom: 20px;
+}
+.feature div div img{
+   width: 15px;
+   height: 15px;
+   
+}
+.feature h3{
+   font-size: 5rem;
+   margin: auto;
+   text-align: center;
+   display: block;
+   position: absolute;
+   top: 30px;
+
+}
+.feature div h4{
+   font-size: 2rem;
+   font-weight: 800;
+   color: var(--violet);
+   padding-bottom: 1rem;
+}
+.feature div p{
+   font-size: 1rem;
+   font-family: 800;
+   font-size:1.2rem;
+   
+}
+.feature div button{
+   width: 40%;
+   height: 5vh;
+   background-color: var(--violet);
+   color: white;
+   border: none;
+   border-radius: 4px;
+}
+.feature div button:hover{
+   background-color: white;
+   color: var(--violet);
+   border: 0.4px black solid;
+   font-weight: 900;
+}
+.feature div span{
+   width: 60px;
+   height: 23px;
+   font-weight: 900;
+   font-size: 1.5rem;
+   text-align: center;
+   background-color: red;
+   color: yellow;
+   position:absolute;
+   top: 0;
+   z-index: 1000;
+}
+
+
+@media (max-width: 1000px) {
+   .feature {
+      flex-wrap: wrap;
+      flex-direction: row;
+      height: auto;
+      padding-top: 40px;
+   }
+   .feature h3{
+      font-size: 2.5rem;
+      top: 2px;
+      font-weight: 900;
+   }
+   .feature div {
+      width: 45%;
+      margin: 2% 2%;
+   }
+   .feature div:nth-child(3) {
+      width: 45%;
+      margin: 2% 3%;
+      order: 3;
+   }
+}
+@media (max-width: 500px) {
+   .feature {
+      flex-wrap: wrap;
+      height: auto;
+   }
+   .feature div {
+      width: 80%;
+      margin: 20px auto;
+   }
+ .feature div:nth-child(3){
+   width:80%;
+   margin: 0;
+   order:1;
+ }  
+}
